@@ -11,6 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "your-default-secret-key")  # DO NOT use default in prod
 DEBUG = os.getenv("DJANGO_DEBUG", "False").lower() in ("true", "1", "yes")
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost").split(",")
+CSRF_TRUSTED_ORIGINS = ['http://thedev.com.br', 'http://www.thedev.com.br']
 
 # APPLICATIONS
 INSTALLED_APPS = [
